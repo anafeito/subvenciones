@@ -1,0 +1,813 @@
+[
+ {
+  "id": "DEMO-001",
+  "titulo": "Programa de digitalización de pymes industriales",
+  "organo": "Agencia autonómica de innovación (ejemplo)",
+  "ambito": "Comunitat Valenciana",
+  "importe_max": 60000,
+  "intensidad": 50,
+  "presupuesto_total": 8000000,
+  "tipo": "digitalizacion",
+  "abierta_hace_dias": 12,
+  "cierra_en_dias": 19,
+  "minimis": true,
+  "tasa_concesion_hist": 0.62,
+  "resumen": "Financiar la implantación de soluciones digitales e industria 4.0 en pymes industriales.",
+  "requisitos": [
+   {
+    "id": "pyme",
+    "texto": "Ser pyme (Anexo I, Reglamento UE 651/2014)",
+    "campo": "tamano",
+    "op": "<=",
+    "valor": "mediana",
+    "cita": "Art. 3.1"
+   },
+   {
+    "id": "territorio",
+    "texto": "Centro de trabajo en Comunitat Valenciana",
+    "campo": "comunidad",
+    "op": "in",
+    "valor": [
+     "Comunitat Valenciana"
+    ],
+    "cita": "Art. 3.2"
+   },
+   {
+    "id": "cnae",
+    "texto": "Actividad industrial (CNAE 10 a 33)",
+    "campo": "cnae",
+    "op": "prefix_in",
+    "valor": [
+     "10",
+     "11",
+     "12",
+     "13",
+     "14",
+     "15",
+     "16",
+     "17",
+     "18",
+     "19",
+     "20",
+     "21",
+     "22",
+     "23",
+     "24",
+     "25",
+     "26",
+     "27",
+     "28",
+     "29",
+     "30",
+     "31",
+     "32",
+     "33"
+    ],
+    "cita": "Art. 3.3 y Anexo II"
+   },
+   {
+    "id": "antiguedad",
+    "texto": "Antigüedad mínima de 1 año",
+    "campo": "antiguedad_anios",
+    "op": ">=",
+    "valor": 1,
+    "cita": "Art. 3.4"
+   },
+   {
+    "id": "hacienda",
+    "texto": "Estar al corriente con la Agencia Tributaria",
+    "campo": "al_corriente_hacienda",
+    "op": "true",
+    "valor": true,
+    "cita": "Art. 4.a"
+   },
+   {
+    "id": "ss",
+    "texto": "Estar al corriente con la Seguridad Social",
+    "campo": "al_corriente_ss",
+    "op": "true",
+    "valor": true,
+    "cita": "Art. 4.b"
+   },
+   {
+    "id": "minimis",
+    "texto": "No superar 300.000 € de ayudas de minimis en 3 años",
+    "campo": "minimis_recibido_3_anios",
+    "op": "<",
+    "valor": 300000,
+    "cita": "Art. 5"
+   },
+   {
+    "id": "inversion",
+    "texto": "Inversión mínima de 20.000 €",
+    "campo": "inversion_prevista",
+    "op": ">=",
+    "valor": 20000,
+    "cita": "Art. 6.2"
+   }
+  ],
+  "criterios_valoracion": [
+   "Grado de transformación digital del proceso productivo (hasta 40 puntos)",
+   "Viabilidad técnica y económica (hasta 30 puntos)",
+   "Impacto en empleo y productividad (hasta 20 puntos)",
+   "Empresa liderada por mujeres o en municipio de menos de 5.000 habitantes (10 puntos)"
+  ],
+  "documentos": [
+   "Solicitud normalizada firmada electrónicamente",
+   "Certificado de estar al corriente con la AEAT",
+   "Certificado de estar al corriente con la TGSS",
+   "Declaración responsable de ayudas de minimis",
+   "Memoria técnica del proyecto",
+   "Tres presupuestos de proveedores distintos (si el gasto supera 15.000 €)"
+  ],
+  "fuente": "demo",
+  "concurrencia_competitiva": true
+ },
+ {
+  "id": "DEMO-002",
+  "titulo": "Ayudas a la eficiencia energética y autoconsumo en empresas",
+  "organo": "Instituto autonómico de la energía (ejemplo)",
+  "ambito": "Comunitat Valenciana",
+  "importe_max": 40000,
+  "intensidad": 45,
+  "presupuesto_total": 5000000,
+  "tipo": "eficiencia",
+  "abierta_hace_dias": 30,
+  "cierra_en_dias": 9,
+  "concurrencia_competitiva": false,
+  "tasa_concesion_hist": 0.71,
+  "resumen": "Concurrencia no competitiva por orden de presentación hasta agotar presupuesto.",
+  "requisitos": [
+   {
+    "id": "pyme",
+    "texto": "Ser pyme (Anexo I, Reglamento UE 651/2014)",
+    "campo": "tamano",
+    "op": "<=",
+    "valor": "mediana",
+    "cita": "Base 2"
+   },
+   {
+    "id": "territorio",
+    "texto": "Centro de trabajo en Comunitat Valenciana",
+    "campo": "comunidad",
+    "op": "in",
+    "valor": [
+     "Comunitat Valenciana"
+    ],
+    "cita": "Base 2"
+   },
+   {
+    "id": "hacienda",
+    "texto": "Estar al corriente con la Agencia Tributaria",
+    "campo": "al_corriente_hacienda",
+    "op": "true",
+    "valor": true,
+    "cita": "Base 4"
+   },
+   {
+    "id": "ss",
+    "texto": "Estar al corriente con la Seguridad Social",
+    "campo": "al_corriente_ss",
+    "op": "true",
+    "valor": true,
+    "cita": "Base 4"
+   },
+   {
+    "id": "inversion",
+    "texto": "Inversión mínima de 10.000 €",
+    "campo": "inversion_prevista",
+    "op": ">=",
+    "valor": 10000,
+    "cita": "Base 5"
+   }
+  ],
+  "criterios_valoracion": [
+   "Ahorro energético anual estimado (kWh)",
+   "Reducción de emisiones de CO2"
+  ],
+  "documentos": [
+   "Solicitud normalizada firmada electrónicamente",
+   "Certificado de estar al corriente con la AEAT",
+   "Certificado de estar al corriente con la TGSS",
+   "Declaración responsable de ayudas de minimis",
+   "Memoria técnica del proyecto",
+   "Tres presupuestos de proveedores distintos (si el gasto supera 15.000 €)"
+  ],
+  "fuente": "demo"
+ },
+ {
+  "id": "DEMO-003",
+  "titulo": "Kit de digitalización para microempresas y autónomos (ejemplo estatal)",
+  "organo": "Entidad pública estatal de digitalización (ejemplo)",
+  "ambito": "Estatal",
+  "importe_max": 6000,
+  "intensidad": 100,
+  "presupuesto_total": 300000000,
+  "tipo": "digitalizacion",
+  "abierta_hace_dias": 60,
+  "cierra_en_dias": 45,
+  "concurrencia_competitiva": false,
+  "minimis": true,
+  "tasa_concesion_hist": 0.85,
+  "resumen": "Bono para contratar soluciones digitales con agentes digitalizadores adheridos.",
+  "requisitos": [
+   {
+    "id": "plantilla_max",
+    "texto": "Menos de 10 empleados",
+    "campo": "empleados",
+    "op": "<",
+    "valor": 10,
+    "cita": "Art. 8"
+   },
+   {
+    "id": "antiguedad",
+    "texto": "Antigüedad mínima de 6 meses",
+    "campo": "antiguedad_anios",
+    "op": ">=",
+    "valor": 0.5,
+    "cita": "Art. 8.c"
+   },
+   {
+    "id": "hacienda",
+    "texto": "Estar al corriente con la Agencia Tributaria",
+    "campo": "al_corriente_hacienda",
+    "op": "true",
+    "valor": true,
+    "cita": "Art. 8.d"
+   },
+   {
+    "id": "ss",
+    "texto": "Estar al corriente con la Seguridad Social",
+    "campo": "al_corriente_ss",
+    "op": "true",
+    "valor": true,
+    "cita": "Art. 8.d"
+   },
+   {
+    "id": "minimis",
+    "texto": "No superar 300.000 € de ayudas de minimis en 3 años",
+    "campo": "minimis_recibido_3_anios",
+    "op": "<",
+    "valor": 300000,
+    "cita": "Art. 8.e"
+   }
+  ],
+  "criterios_valoracion": [],
+  "documentos": [
+   "Solicitud en sede electrónica",
+   "Test de autodiagnóstico digital",
+   "Declaración de minimis"
+  ],
+  "fuente": "demo"
+ },
+ {
+  "id": "DEMO-004",
+  "titulo": "Incentivos a la contratación indefinida de jóvenes",
+  "organo": "Servicio público de empleo (ejemplo)",
+  "ambito": "Comunidad de Madrid",
+  "importe_max": 11000,
+  "intensidad": null,
+  "presupuesto_total": 20000000,
+  "tipo": "contratacion",
+  "abierta_hace_dias": 40,
+  "cierra_en_dias": 26,
+  "concurrencia_competitiva": false,
+  "tasa_concesion_hist": 0.78,
+  "resumen": "5.500 € por contrato indefinido a menores de 30 años, hasta 2 contratos.",
+  "requisitos": [
+   {
+    "id": "territorio",
+    "texto": "Centro de trabajo en Comunidad de Madrid",
+    "campo": "comunidad",
+    "op": "in",
+    "valor": [
+     "Comunidad de Madrid"
+    ],
+    "cita": "Art. 2"
+   },
+   {
+    "id": "hacienda",
+    "texto": "Estar al corriente con la Agencia Tributaria",
+    "campo": "al_corriente_hacienda",
+    "op": "true",
+    "valor": true,
+    "cita": "Art. 4"
+   },
+   {
+    "id": "ss",
+    "texto": "Estar al corriente con la Seguridad Social",
+    "campo": "al_corriente_ss",
+    "op": "true",
+    "valor": true,
+    "cita": "Art. 4"
+   },
+   {
+    "id": "cualitativo",
+    "texto": "No haber despedido improcedentemente en los 6 meses previos",
+    "campo": "despidos",
+    "op": "cualitativo",
+    "cita": "Art. 5"
+   }
+  ],
+  "criterios_valoracion": [],
+  "documentos": [
+   "Solicitud",
+   "Contrato de trabajo",
+   "Alta en Seguridad Social",
+   "Certificados AEAT y TGSS"
+  ],
+  "fuente": "demo"
+ },
+ {
+  "id": "DEMO-005",
+  "titulo": "Proyectos de I+D+i de empresas de nueva creación",
+  "organo": "Agencia autonómica de desarrollo (ejemplo)",
+  "ambito": "Comunidad de Madrid",
+  "importe_max": 100000,
+  "intensidad": 70,
+  "presupuesto_total": 6000000,
+  "tipo": "innovacion",
+  "abierta_hace_dias": 5,
+  "cierra_en_dias": 34,
+  "tasa_concesion_hist": 0.34,
+  "resumen": "Apoyo a startups innovadoras con menos de 5 años de vida.",
+  "requisitos": [
+   {
+    "id": "pyme",
+    "texto": "Ser pyme (Anexo I, Reglamento UE 651/2014)",
+    "campo": "tamano",
+    "op": "<=",
+    "valor": "mediana",
+    "cita": "Art. 4.1"
+   },
+   {
+    "id": "territorio",
+    "texto": "Centro de trabajo en Comunidad de Madrid",
+    "campo": "comunidad",
+    "op": "in",
+    "valor": [
+     "Comunidad de Madrid"
+    ],
+    "cita": "Art. 4.2"
+   },
+   {
+    "id": "joven",
+    "texto": "Constituida hace menos de 5 años",
+    "campo": "antiguedad_anios",
+    "op": "<",
+    "valor": 5,
+    "cita": "Art. 4.3"
+   },
+   {
+    "id": "hacienda",
+    "texto": "Estar al corriente con la Agencia Tributaria",
+    "campo": "al_corriente_hacienda",
+    "op": "true",
+    "valor": true,
+    "cita": "Art. 4.5"
+   },
+   {
+    "id": "ss",
+    "texto": "Estar al corriente con la Seguridad Social",
+    "campo": "al_corriente_ss",
+    "op": "true",
+    "valor": true,
+    "cita": "Art. 4.5"
+   },
+   {
+    "id": "cualitativo",
+    "texto": "Carácter innovador del proyecto acreditado en la memoria",
+    "campo": "innovacion",
+    "op": "cualitativo",
+    "cita": "Art. 7"
+   }
+  ],
+  "criterios_valoracion": [
+   "Grado de innovación tecnológica (hasta 35 puntos)",
+   "Capacidad del equipo (hasta 25 puntos)",
+   "Potencial de mercado y escalabilidad (hasta 25 puntos)",
+   "Empleo cualificado previsto (hasta 15 puntos)"
+  ],
+  "documentos": [
+   "Solicitud normalizada firmada electrónicamente",
+   "Certificado de estar al corriente con la AEAT",
+   "Certificado de estar al corriente con la TGSS",
+   "Declaración responsable de ayudas de minimis",
+   "Memoria técnica del proyecto",
+   "Tres presupuestos de proveedores distintos (si el gasto supera 15.000 €)"
+  ],
+  "fuente": "demo",
+  "concurrencia_competitiva": true
+ },
+ {
+  "id": "DEMO-006",
+  "titulo": "Programa de iniciación a la exportación",
+  "organo": "Entidad estatal de comercio exterior (ejemplo)",
+  "ambito": "Estatal",
+  "importe_max": 20000,
+  "intensidad": 50,
+  "presupuesto_total": 4000000,
+  "tipo": "internacionalizacion",
+  "abierta_hace_dias": 20,
+  "cierra_en_dias": 15,
+  "minimis": true,
+  "tasa_concesion_hist": 0.55,
+  "resumen": "Plan de internacionalización y acciones de promoción en mercados exteriores.",
+  "requisitos": [
+   {
+    "id": "pyme",
+    "texto": "Ser pyme (Anexo I, Reglamento UE 651/2014)",
+    "campo": "tamano",
+    "op": "<=",
+    "valor": "mediana",
+    "cita": "Art. 3"
+   },
+   {
+    "id": "hacienda",
+    "texto": "Estar al corriente con la Agencia Tributaria",
+    "campo": "al_corriente_hacienda",
+    "op": "true",
+    "valor": true,
+    "cita": "Art. 3"
+   },
+   {
+    "id": "ss",
+    "texto": "Estar al corriente con la Seguridad Social",
+    "campo": "al_corriente_ss",
+    "op": "true",
+    "valor": true,
+    "cita": "Art. 3"
+   },
+   {
+    "id": "minimis",
+    "texto": "No superar 300.000 € de ayudas de minimis en 3 años",
+    "campo": "minimis_recibido_3_anios",
+    "op": "<",
+    "valor": 300000,
+    "cita": "Art. 9"
+   },
+   {
+    "id": "facturacion_max",
+    "texto": "Facturación inferior a 50 M€",
+    "campo": "facturacion",
+    "op": "<",
+    "valor": 50000000,
+    "cita": "Art. 3.b"
+   }
+  ],
+  "criterios_valoracion": [
+   "Calidad del plan de internacionalización",
+   "Mercados objetivo y potencial",
+   "Capacidad exportadora"
+  ],
+  "documentos": [
+   "Solicitud normalizada firmada electrónicamente",
+   "Certificado de estar al corriente con la AEAT",
+   "Certificado de estar al corriente con la TGSS",
+   "Declaración responsable de ayudas de minimis",
+   "Memoria técnica del proyecto",
+   "Tres presupuestos de proveedores distintos (si el gasto supera 15.000 €)"
+  ],
+  "fuente": "demo",
+  "concurrencia_competitiva": true
+ },
+ {
+  "id": "DEMO-007",
+  "titulo": "Ayudas a la modernización del comercio minorista",
+  "organo": "Ayuntamiento (ejemplo)",
+  "ambito": "Comunidad de Madrid",
+  "importe_max": 8000,
+  "intensidad": 60,
+  "presupuesto_total": 1500000,
+  "tipo": "comercio",
+  "abierta_hace_dias": 8,
+  "cierra_en_dias": 12,
+  "tasa_concesion_hist": 0.66,
+  "resumen": "Reforma de locales, escaparates y venta online del pequeño comercio.",
+  "requisitos": [
+   {
+    "id": "cnae",
+    "texto": "Comercio minorista (CNAE 47)",
+    "campo": "cnae",
+    "op": "prefix_in",
+    "valor": [
+     "47"
+    ],
+    "cita": "Art. 2"
+   },
+   {
+    "id": "plantilla_max",
+    "texto": "Menos de 10 empleados",
+    "campo": "empleados",
+    "op": "<",
+    "valor": 10,
+    "cita": "Art. 2"
+   },
+   {
+    "id": "territorio",
+    "texto": "Centro de trabajo en Comunidad de Madrid",
+    "campo": "comunidad",
+    "op": "in",
+    "valor": [
+     "Comunidad de Madrid"
+    ],
+    "cita": "Art. 2"
+   },
+   {
+    "id": "hacienda",
+    "texto": "Estar al corriente con la Agencia Tributaria",
+    "campo": "al_corriente_hacienda",
+    "op": "true",
+    "valor": true,
+    "cita": "Art. 3"
+   },
+   {
+    "id": "ss",
+    "texto": "Estar al corriente con la Seguridad Social",
+    "campo": "al_corriente_ss",
+    "op": "true",
+    "valor": true,
+    "cita": "Art. 3"
+   }
+  ],
+  "criterios_valoracion": [
+   "Antigüedad del comercio",
+   "Mejora de la accesibilidad y sostenibilidad",
+   "Presupuesto ajustado al proyecto"
+  ],
+  "documentos": [
+   "Solicitud normalizada firmada electrónicamente",
+   "Certificado de estar al corriente con la AEAT",
+   "Certificado de estar al corriente con la TGSS",
+   "Declaración responsable de ayudas de minimis",
+   "Memoria técnica del proyecto",
+   "Tres presupuestos de proveedores distintos (si el gasto supera 15.000 €)"
+  ],
+  "fuente": "demo",
+  "concurrencia_competitiva": true
+ },
+ {
+  "id": "DEMO-008",
+  "titulo": "Modernización de la industria agroalimentaria",
+  "organo": "Consejería de agricultura (ejemplo)",
+  "ambito": "Castilla y León",
+  "importe_max": 150000,
+  "intensidad": 40,
+  "presupuesto_total": 12000000,
+  "tipo": "industria",
+  "abierta_hace_dias": 15,
+  "cierra_en_dias": 40,
+  "tasa_concesion_hist": 0.48,
+  "resumen": "Inversiones en transformación y comercialización de productos agrarios.",
+  "requisitos": [
+   {
+    "id": "territorio",
+    "texto": "Centro de trabajo en Castilla y León",
+    "campo": "comunidad",
+    "op": "in",
+    "valor": [
+     "Castilla y León"
+    ],
+    "cita": "Base 3"
+   },
+   {
+    "id": "cnae",
+    "texto": "Agricultura o industria alimentaria (CNAE 01, 10, 11)",
+    "campo": "cnae",
+    "op": "prefix_in",
+    "valor": [
+     "01",
+     "10",
+     "11"
+    ],
+    "cita": "Base 3"
+   },
+   {
+    "id": "hacienda",
+    "texto": "Estar al corriente con la Agencia Tributaria",
+    "campo": "al_corriente_hacienda",
+    "op": "true",
+    "valor": true,
+    "cita": "Base 4"
+   },
+   {
+    "id": "ss",
+    "texto": "Estar al corriente con la Seguridad Social",
+    "campo": "al_corriente_ss",
+    "op": "true",
+    "valor": true,
+    "cita": "Base 4"
+   },
+   {
+    "id": "inversion",
+    "texto": "Inversión mínima de 50.000 €",
+    "campo": "inversion_prevista",
+    "op": ">=",
+    "valor": 50000,
+    "cita": "Base 6"
+   }
+  ],
+  "criterios_valoracion": [
+   "Incremento del valor añadido",
+   "Empleo creado",
+   "Sostenibilidad ambiental",
+   "Integración cooperativa"
+  ],
+  "documentos": [
+   "Solicitud normalizada firmada electrónicamente",
+   "Certificado de estar al corriente con la AEAT",
+   "Certificado de estar al corriente con la TGSS",
+   "Declaración responsable de ayudas de minimis",
+   "Memoria técnica del proyecto",
+   "Tres presupuestos de proveedores distintos (si el gasto supera 15.000 €)"
+  ],
+  "fuente": "demo",
+  "concurrencia_competitiva": true
+ },
+ {
+  "id": "DEMO-009",
+  "titulo": "Autoconsumo renovable en el sector agrario y cooperativo",
+  "organo": "Ente regional de la energía (ejemplo)",
+  "ambito": "Castilla y León",
+  "importe_max": 60000,
+  "intensidad": 40,
+  "presupuesto_total": 3000000,
+  "tipo": "eficiencia",
+  "abierta_hace_dias": 25,
+  "cierra_en_dias": 21,
+  "concurrencia_competitiva": false,
+  "tasa_concesion_hist": 0.69,
+  "requisitos": [
+   {
+    "id": "territorio",
+    "texto": "Centro de trabajo en Castilla y León",
+    "campo": "comunidad",
+    "op": "in",
+    "valor": [
+     "Castilla y León"
+    ],
+    "cita": "Art. 2"
+   },
+   {
+    "id": "hacienda",
+    "texto": "Estar al corriente con la Agencia Tributaria",
+    "campo": "al_corriente_hacienda",
+    "op": "true",
+    "valor": true,
+    "cita": "Art. 4"
+   },
+   {
+    "id": "ss",
+    "texto": "Estar al corriente con la Seguridad Social",
+    "campo": "al_corriente_ss",
+    "op": "true",
+    "valor": true,
+    "cita": "Art. 4"
+   }
+  ],
+  "criterios_valoracion": [
+   "Potencia instalada (kWp)",
+   "Porcentaje de autoconsumo"
+  ],
+  "documentos": [
+   "Solicitud normalizada firmada electrónicamente",
+   "Certificado de estar al corriente con la AEAT",
+   "Certificado de estar al corriente con la TGSS",
+   "Declaración responsable de ayudas de minimis",
+   "Memoria técnica del proyecto",
+   "Tres presupuestos de proveedores distintos (si el gasto supera 15.000 €)"
+  ],
+  "fuente": "demo"
+ },
+ {
+  "id": "DEMO-010",
+  "titulo": "Industria 4.0 para medianas empresas de Cantabria",
+  "organo": "Sociedad regional de desarrollo (ejemplo)",
+  "ambito": "Cantabria",
+  "importe_max": 200000,
+  "intensidad": 30,
+  "presupuesto_total": 7000000,
+  "tipo": "industria",
+  "abierta_hace_dias": 3,
+  "cierra_en_dias": 50,
+  "tasa_concesion_hist": 0.41,
+  "requisitos": [
+   {
+    "id": "pyme",
+    "texto": "Ser pyme (Anexo I, Reglamento UE 651/2014)",
+    "campo": "tamano",
+    "op": "<=",
+    "valor": "mediana",
+    "cita": "Art. 3"
+   },
+   {
+    "id": "territorio",
+    "texto": "Centro de trabajo en Cantabria",
+    "campo": "comunidad",
+    "op": "in",
+    "valor": [
+     "Cantabria"
+    ],
+    "cita": "Art. 3"
+   },
+   {
+    "id": "plantilla_min",
+    "texto": "Plantilla de al menos 50 personas",
+    "campo": "empleados",
+    "op": ">=",
+    "valor": 50,
+    "cita": "Art. 3.c"
+   },
+   {
+    "id": "hacienda",
+    "texto": "Estar al corriente con la Agencia Tributaria",
+    "campo": "al_corriente_hacienda",
+    "op": "true",
+    "valor": true,
+    "cita": "Art. 4"
+   },
+   {
+    "id": "ss",
+    "texto": "Estar al corriente con la Seguridad Social",
+    "campo": "al_corriente_ss",
+    "op": "true",
+    "valor": true,
+    "cita": "Art. 4"
+   }
+  ],
+  "criterios_valoracion": [
+   "Grado de automatización",
+   "Mejora de productividad",
+   "Empleo"
+  ],
+  "documentos": [
+   "Solicitud normalizada firmada electrónicamente",
+   "Certificado de estar al corriente con la AEAT",
+   "Certificado de estar al corriente con la TGSS",
+   "Declaración responsable de ayudas de minimis",
+   "Memoria técnica del proyecto",
+   "Tres presupuestos de proveedores distintos (si el gasto supera 15.000 €)"
+  ],
+  "fuente": "demo",
+  "concurrencia_competitiva": true
+ },
+ {
+  "id": "DEMO-011",
+  "titulo": "Ciberseguridad para pymes",
+  "organo": "Instituto estatal de ciberseguridad (ejemplo)",
+  "ambito": "Estatal",
+  "importe_max": 15000,
+  "intensidad": 80,
+  "presupuesto_total": 10000000,
+  "tipo": "digitalizacion",
+  "abierta_hace_dias": 50,
+  "cierra_en_dias": 4,
+  "concurrencia_competitiva": false,
+  "minimis": true,
+  "tasa_concesion_hist": 0.74,
+  "requisitos": [
+   {
+    "id": "pyme",
+    "texto": "Ser pyme (Anexo I, Reglamento UE 651/2014)",
+    "campo": "tamano",
+    "op": "<=",
+    "valor": "mediana",
+    "cita": "Art. 5"
+   },
+   {
+    "id": "hacienda",
+    "texto": "Estar al corriente con la Agencia Tributaria",
+    "campo": "al_corriente_hacienda",
+    "op": "true",
+    "valor": true,
+    "cita": "Art. 5"
+   },
+   {
+    "id": "ss",
+    "texto": "Estar al corriente con la Seguridad Social",
+    "campo": "al_corriente_ss",
+    "op": "true",
+    "valor": true,
+    "cita": "Art. 5"
+   },
+   {
+    "id": "minimis",
+    "texto": "No superar 300.000 € de ayudas de minimis en 3 años",
+    "campo": "minimis_recibido_3_anios",
+    "op": "<",
+    "valor": 300000,
+    "cita": "Art. 6"
+   }
+  ],
+  "criterios_valoracion": [],
+  "documentos": [
+   "Solicitud normalizada firmada electrónicamente",
+   "Certificado de estar al corriente con la AEAT",
+   "Certificado de estar al corriente con la TGSS",
+   "Declaración responsable de ayudas de minimis",
+   "Memoria técnica del proyecto",
+   "Tres presupuestos de proveedores distintos (si el gasto supera 15.000 €)"
+  ],
+  "fuente": "demo"
+ }
+]

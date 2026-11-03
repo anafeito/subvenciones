@@ -1,0 +1,29 @@
+name: Sincronizar BDNS
+
+on:
+  schedule:
+    - cron: "17 5 * * *"     # todos los días a las 05:17 UTC
+  workflow_dispatch:          # botón "Run workflow" para lanzarlo a mano
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install httpx pydantic
+      - name: Descargar convocatorias nuevas
+        run: python scripts/sync_bdns.py --dias 60 --max 4000
+      - name: Guardar el catálogo en el repositorio
+        run: |
+          git config user.name "sync-bdns"
+          git config user.email "sync-bdns@users.noreply.github.com"
+          git add data/catalogo.json.gz data/vistos.json.gz
+          git diff --cached --quiet || git commit -m "Catálogo BDNS $(date -u +%F)"
+          git push
